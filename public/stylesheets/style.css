@@ -8,17 +8,16 @@ h1 {
   padding: 0px;
 }
 
+a {
+  text-decoration: none;
+  color: yellow;
+}
+
 input[type="text"] {
   background-color: #444;
   border: 0px;
   color: #fff;
   font-size: 140%;
-  color: yellow;
-}
-
-a#go {
-  font-size: 180%;
-  text-decoration: none;
   color: yellow;
 }
 
