@@ -35,9 +35,9 @@ div#form div {
 
 div#graph {
   position: absolute;
-  top: 80px;
+  top: 50px;
   left: 80px;
-  width: 420px;
+  width: 600px;
   height: 350px;
 }
 
