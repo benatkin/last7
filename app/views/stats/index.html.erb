@@ -1,0 +1,62 @@
+<div id="header">
+  <h1>last7</h1>
+</div>
+
+<div id="form">
+  <div>
+    twitter username:
+    <input type="text" name="username" size="15" maxlength="15" value="benatkin" spellcheck="false" />
+  </div>
+  <div>
+    goal: a maximum of
+    <input type="text" name="maxtweets" size="2" maxlength="2" value="10" />
+    tweets per day
+  </div>
+  <div>
+    <a id="go" href="javascript:void(0)">Go</a>
+    <img id="spinner" class="invisible gap" src="/images/spinner.gif">
+  </div>
+</div>
+
+<div id="table">
+  <table id="tweetData">
+    <caption>tweet count for last 7 days</caption>
+    <thead>
+      <tr>
+        <td></td>
+        <th scope="col">sun</th>
+        <th scope="col">mon</th>
+        <th scope="col">tue</th>
+        <th scope="col">wed</th>
+        <th scope="col">thu</th>
+        <th scope="col">fri</th>
+        <th scope="col">sat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">desired max</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <th scope="row">actual</td>
+        <td>7</td>
+        <td>14</td>
+        <td>23</td>
+        <td>5</td>
+        <td>9</td>
+        <td>15</td>
+        <td>6</td>
+      </tr>
+    </tbody>
+  </table>	
+</div>
+
+<div id="graph">
+</div>

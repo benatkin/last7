@@ -1,0 +1,51 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+input[type="text"] {
+  background-color: #444;
+  border: 0px;
+  color: #fff;
+  font-size: 140%;
+  color: yellow;
+}
+
+a#go {
+  font-size: 180%;
+  text-decoration: none;
+  color: yellow;
+}
+
+div#header {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 200%;
+}
+
+div#form div {
+  padding: 4px;
+}
+
+div#graph {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  width: 420px;
+  height: 350px;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.gap {
+  margin-left: 15px;
+}
+
