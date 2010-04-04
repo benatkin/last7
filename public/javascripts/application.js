@@ -63,6 +63,7 @@ function getTweets(evt, noValidationErrors) {
   var tweeturl = "http://twitter.com/status/user_timeline/#{user}.json?count=200&callback=?";
   $.getJSON(tweeturl.replace("#{user}", username), handleTweets);
   $('#go').blur();
+  return false;
 }
 
 $(function() {
