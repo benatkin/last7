@@ -3,19 +3,21 @@
 </div>
 
 <div id="form">
-  <div>
-    twitter username:
-    <input type="text" name="username" size="15" maxlength="15" value="" spellcheck="false" />
-  </div>
-  <div>
-    goal: a maximum of
-    <input type="text" name="maxtweets" size="2" maxlength="2" value="10" />
-    tweets per day
-  </div>
-  <div>
-    <a id="go" href="javascript:void(0)">Go</a>
-    <img id="spinner" class="invisible gap" src="/images/spinner.gif">
-  </div>
+  <form>
+    <div>
+      twitter username:
+      <input type="text" name="username" size="15" maxlength="15" value="" spellcheck="false" />
+    </div>
+    <div>
+      goal: a maximum of
+      <input type="text" name="maxtweets" size="2" maxlength="2" value="10" />
+      tweets per day
+    </div>
+    <div>
+      <input type="submit" value="Go" />
+      <img id="spinner" class="invisible gap" src="/images/spinner.gif">
+    </div>
+  </form>
 </div>
 
 <div id="table" class="invisible">

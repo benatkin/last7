@@ -68,5 +68,6 @@ function getTweets(evt, noValidationErrors) {
 $(function() {
   loadCookies();
   getTweets(null, true);
-  $('#go').click(getTweets);
+  $('form').submit(getTweets);
 });
+
