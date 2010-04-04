@@ -10,14 +10,45 @@ function saveCookies() {
   $.cookie('maxtweets', $('input[name=maxtweets]').val());
 }
 
+function updateTableWithData(data) {
+  var today = new Date().addHours(-3);
+  var days = {};
+  for (var i = 0; i < 7; i++) {
+    var loopDate = new Date(today).addHours(i * -24).clearTime();
+    days[i] = days[loopDate] = {
+      'ord': i,
+      'date': loopDate,
+      'dayOfWeek': loopDate.toString('ddd'),
+      'tweets': 0
+    };
+  }
+  for (var i = 0; i < data.length; i++) {
+    var loopDate = new Date(data[i].created_at).addHours(-3).clearTime();
+    for (var j = 0; j < 7; j++) {
+      if (loopDate.equals(days[j]['date']))
+        days[j]['tweets'] = days[j]['tweets'] + 1;
+    }
+  }
+  for (var i=0; i < 7; i++) {
+    console.log(days[i]['dayOfWeek'] + ' ' + days[i]['tweets']);
+    $('#tweetData tr:eq(0) td:eq(' + (6 - i) + ')').text(days[i]['dayOfWeek']);
+    $('#tweetData tr:eq(2) td:eq(' + (6 - i) + ')').text(days[i]['tweets']);
+  }
+}
+
+function updateTableWithMax() {
+  $('#tweetData tr:eq(1) td').text($('input[name=maxtweets]').val());
+}
+
 function handleTweets(data) {
-  $('#spinner').addClass('invisible');
+  saveCookies();
+  updateTableWithMax();
+  updateTableWithData(data);
 	$('#tweetData').visualize({'type': 'area', 'width': '600px', 'height': '350px'}, $('#graph'));
+  $('#spinner').addClass('invisible');
 }
 
 function getTweets(evt, noValidationErrors) {
-  saveCookies();
-
   var username = encodeURIComponent($('input[name=username]').val());
   if (username == "") {
     if (! noValidationErrors) {
