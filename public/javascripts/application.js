@@ -11,11 +11,11 @@ function saveCookies() {
 }
 
 function updateTableWithData(data) {
-  var today = new Date().addHours(-3);
+  var today = new Date().addHours(-3).clearTime();
   var days = {};
   for (var i = 0; i < 7; i++) {
-    var loopDate = new Date(today).addHours(i * -24).clearTime();
-    days[i] = days[loopDate] = {
+    var loopDate = new Date(today).addDays(-i);
+    days[i] = {
       'ord': i,
       'date': loopDate,
       'dayOfWeek': loopDate.toString('ddd'),
