@@ -30,7 +30,6 @@ function updateTableWithData(data) {
     }
   }
   for (var i=0; i < 7; i++) {
-    console.log(days[i]['dayOfWeek'] + ' ' + days[i]['tweets']);
     $('#tweetData tr:eq(0) th:eq(' + (6 - i) + ')').text(days[i]['dayOfWeek']);
     $('#tweetData tr:eq(2) td:eq(' + (6 - i) + ')').text(days[i]['tweets']);
   }
